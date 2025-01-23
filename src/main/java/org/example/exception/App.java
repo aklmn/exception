@@ -26,7 +26,7 @@ class View {
         try {
             return "<html>" + business.doBusiness() + "</html>";
         } catch (BusinessException e) {
-            if (System.nanoTime() % 2 == 0)
+            if (System.nanoTime() % 2 == 1)
                 throw new ViewException("Some context if have one", e);
             else
                 throw new ViewException(e); // no local context, pure rethrow
